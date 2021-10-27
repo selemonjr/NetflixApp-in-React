@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.formContainer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.5))), url("https://assets.nflxext.com/ffe/siteui/vlv3/a1a5d7dc-aedf-4570-b58d-693af16e1445/9fd3e601-8bcd-4daa-bd4f-f95f2c497994/KE-en-20211020-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/a1a5d7dc-aedf-4570-b58d-693af16e1445/9fd3e601-8bcd-4daa-bd4f-f95f2c497994/KE-en-20211020-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.formContainer .logo img {
+  width: 200px;
+  height: 80px;
+  padding-left: 30px;
+}
+
+.formContainer .formLogin {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 500px;
+  height: 450px;
+  margin-top: 3%;
+  margin-left: 33%;
+  border-radius: 10px;
+}
+
+.formContainer .formLogin .formTitle {
+  color: #fff;
+  text-align: center;
+  padding-top: 4%;
+  font-size: 20px;
+}
+
+.formContainer .form {
+  padding: 20px;
+}
+
+.formContainer .form input {
+  padding: 15px 5px;
+  width: 450px;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.formContainer .formButton {
+  text-align: center;
+}
+
+.formContainer .formButton .button {
+  padding: 10px 100px;
+  color: #ff0000;
+  font-size: 20px;
+  margin-top: 5%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.formContainer .formButton .button:hover {
+  background: #ed213a;
+  color: #fff;
+}
+
+.formContainer .formOr {
+  text-align: center;
+}
+
+.formContainer .formOr .formOption {
+  padding-top: 7%;
+  color: #fff;
+  font-size: 20px;
+}
+
+.formContainer .formAuthentication {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+  padding-top: 5%;
+}
+
+.formContainer .formAuthentication .formGoogle, .formContainer .formAuthentication .formGithub, .formContainer .formAuthentication .formAnon {
+  margin: 5px 25px 25px 25px;
+  color: #ff0000;
+}
+
+.formContainer .formAuthentication .formGoogle:hover, .formContainer .formAuthentication .formGithub:hover, .formContainer .formAuthentication .formAnon:hover {
+  color: #fff;
+}
+
+.formContainer .formAuthentication .formGithub, .formContainer .formAuthentication .formAnon {
+  color: #decba4;
+}
+
+.formContainer .formAuthentication .formAnon {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

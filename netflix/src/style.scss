@@ -1,0 +1,318 @@
+@import "./reset";
+@import "./variables";
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navContentDark {
+    background: $black;
+    width: 100%;
+    height: 13vh;
+    @extend .navbarContent;
+}
+
+.navbarContent {
+    position: fixed;
+    width: 100%;
+    padding: 2px;
+    @include space;
+    .netflixLogo {
+        height: 90px;
+        width: 200px;
+    }
+    .netflixAvatar {
+        width: 50px;
+        height: 50px;
+    }
+}
+.formContainer {
+    background:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0,0,0,0.5)),url("https://assets.nflxext.com/ffe/siteui/vlv3/a1a5d7dc-aedf-4570-b58d-693af16e1445/9fd3e601-8bcd-4daa-bd4f-f95f2c497994/KE-en-20211020-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    .logo img {
+        width: 200px;
+        height: 80px;
+        padding-left: 30px;
+    }
+    .formLogin {
+        background: rgba( 255, 255, 255, 0.05 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+        width: 500px;
+        height: 450px;
+        margin-top: 3%;
+        margin-left: 33%;
+        border-radius: 10px;
+        .formTitle {
+            color: $white;
+            text-align: center;
+            padding-top: 4%;
+            font-size: 20px;
+        }
+    }
+    .form {
+        padding: 20px;
+        input {
+            padding: 15px 5px;
+            width: 450px;
+            margin: 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+        }
+    }
+    .formButton {
+       text-align: center;
+       .button {
+        padding: 10px 100px;
+        color: $red;
+        font-size: 20px;
+        margin-top: 5%;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        transition: 0.5s;
+        &:hover {
+            background: #ed213a;
+            color: $white;
+        }
+       }
+    }
+    .formOr {
+        text-align: center;
+        .formOption {
+            padding-top: 7%;
+            color: $white;
+            font-size: 20px;
+        }
+    }
+    .formAuthentication {
+        @include center;
+        font-size: 40px;
+        padding-top: 5%;
+        .formGoogle {
+            margin: 5px 25px 25px 25px;
+            color: $red;
+            &:hover {
+            color: $white;
+            }
+        }
+        .formGithub {
+            @extend .formGoogle;
+            color: #decba4;
+        }
+        .formAnon {
+            @extend .formGithub;
+            color: $white;
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .formContainer {
+        .logo img {
+            height: 50px;
+            width: 100px;
+            padding-left: 10px;
+        }
+        .formLogin {
+            background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+            width: 95%;
+            height: 65vh;
+            margin-top: 10%;
+            margin-left: 2.5%;
+            border-radius: 10px;
+            .formTitle {
+                color: $white;
+                text-align: center;
+                padding-top: 4%;
+                font-size: 15px;
+            }
+        }
+        .form {
+            padding: 20px;
+            input {
+                padding: 10px 5px;
+                width: 250px;
+                margin: 10px;
+                font-size: 15px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+            }
+        }
+        .formButton {
+            text-align: center;
+            .button {
+             padding: 10px 62px;
+             color: $red;
+             font-size: 15px;
+             margin-top: 5%;
+             margin-right: 7%;
+             outline: none;
+             border-radius: 5px;
+             border: none;
+             transition: 0.5s;
+             &:hover {
+                 background: #ed213a;
+                 color: $white;
+             }
+            }
+         }
+         .formAuthentication {
+            @include center;
+            font-size: 30px;
+            padding-top: 8%;
+        }
+    }
+    
+}
+.netflixTitle {
+    font-size: 25px;
+    padding-top: 2%;
+    padding-left: 1%;
+    color: $white;
+}
+.row_container{
+    width: 100%;
+    overflow-x:scroll ;
+    margin:5px 0 5px 0;
+    overflow-y: hidden;
+    display: flex;
+    .smallImage {
+        width: 250px;
+        margin: 10px;
+        height: 300px;
+        transition:all 400ms;
+        &:hover {
+            transform: scale(1.08);
+        }
+
+    }
+    .largePoster {
+        height: 350px;
+        width: 450px;
+        margin: 15px;
+        transition: all 400ms;
+        &:hover {
+            transform: scale(1.09);
+        }
+    }
+}
+.row_container::-webkit-scrollbar{
+    display: none;
+}
+@media(max-width:700px) {
+   .row_container {
+    .smallImage {
+        height: 200px;
+        width: 200px;
+    }
+    .largePoster {
+        height: 250px;
+        width: 250px;
+    }
+   }
+}
+.banner_container {
+    object-fit: cover;
+    height: 80vh;
+    padding-top: 20%;
+    margin-bottom: 1%;
+}
+.banner_movie_content {
+    color: $white;
+    height: 30vh;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: -7%;
+}
+.bannerName {
+    font-size: 40px;
+    margin-bottom: 2%;
+}
+.play,.myList {
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    &:hover {
+        background: $red;
+        color: $white;
+    }
+}
+.bannerOverview {
+    font-size: 1em;
+    line-height: 20px;
+    margin-top: 1%;
+}
+@media(max-width:700px) {
+    .banner_container {
+        object-fit: cover;
+        height: 80vh;
+        width: 100%;
+        padding-top: 20%;
+        margin-bottom: 3%;
+    }
+    .banner_movie_content {
+        color: $white;
+        height: 30vh;
+        width: 90%;
+        margin-left: 7%;
+        margin-top: 25%;
+    }
+    .bannerName {
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+    .play,.myList {
+        padding: 5px 20px;
+        font-size: 15px;
+    }
+    .bannerOverview {
+        font-size: 15px;
+    }
+
+}
+
+@media(max-width:700px) {
+    .navbarContent {
+        .netflixLogo {
+            height: 50px;
+            width: 150px;
+        }
+        .netflixAvatar {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+.credit {
+    text-align: center;
+    color: $white;
+    margin-left: 4%;
+    .fas {
+        color: $red;
+        margin-right: 5px;
+    }
+}
